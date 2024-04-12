@@ -1,0 +1,11 @@
+hydra:
+  run:
+    dir: ../data/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+base:
+  real_batch_size: 4
+  batch_size: 2048
+  learning_rate: 1e-06
+  max_epoch: 1
+  pretrained_name: bardsai/twitter-sentiment-pl-base
+  save_path: data/sentiment
